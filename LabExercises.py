@@ -29,7 +29,6 @@ def processWord(word):
 
 def engToMorse(line,morseToEngDict,engToMorseDict):
     newLine = ""
-    words = []
     words = line.split()
     for word in words:
         word = processWord(word).upper()
@@ -42,9 +41,6 @@ def engToMorse(line,morseToEngDict,engToMorseDict):
 def morseToEng(line,morseToEngDict,engToMorseDict):
     newLine = ""
     newWord = ""
-    while "\n" in line:
-        line = line.replace("\n","     ",1)
-    words = []
     words = line.split("     ")
     for word in words:
         chars = word.split(" ")
