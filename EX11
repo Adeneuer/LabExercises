@@ -1,0 +1,17 @@
+import math
+
+def isPal(num):
+    snum = str(num)
+    return snum==snum[::-1]
+
+def findPal():
+    pals = []
+    for i in range(999,899,-1):
+        for j in range(i,899,-1):
+            if isPal(i*j):
+                pals.append(i*j)
+    return max(pals)
+
+def main11():
+    print(findPal())
+main11()
