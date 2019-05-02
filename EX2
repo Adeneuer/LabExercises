@@ -1,0 +1,20 @@
+def baseConv(li,b1,b2):
+    newList = []
+    sumB10 = 0
+    for exp in range(len(li)-1,-1,-1):
+        if int(li[-1-exp])<b1:
+            sumB10+=int(li[-1-exp])*pow(b1,exp)
+        else:
+            return "Illegal conversion"
+    while sumB10:
+        newList.insert(0,sumB10%b2)
+        sumB10 = int(sumB10/b2)
+    return newList
+
+def main2():
+    fin = open("thoutgs.txt", 'r')
+    r = fin.readlines()
+    numList = []
+    numList = r[0].split()
+    print(baseConv(numList,int(r[1]),int(r[2])))
+main2()
