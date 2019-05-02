@@ -79,3 +79,4 @@ def main6():
         print(r.strip())
         print(engToMorse(r,morseToEngDict,engToMorseDict))
         print(morseToEng(engToMorse(r,morseToEngDict,engToMorseDict),morseToEngDict,engToMorseDict),end='\n\n')
+main6()
